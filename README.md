@@ -23,6 +23,15 @@ completed documentation and tests.
 - **Comment** all of the controllers (and actions), Models, DbContext, and Startup file.
   - These comments should be throurough, detailed, and should prove your understanding of the codebase
 
+### Day 2 (Class 33)
+Modifications **may** be required from your templated project....
+- Create 2 different types of users (Member-type and Admin-type)
+- Create a different registration page for the Admin page (this can be a hidden link)
+- Attach at least 4 claims (including their Role) to the registration process.
+- Redirect the user, dependant on their role, to a specific page, upon login (can you figure out how to lock down a page dependant on their Role?)
+- Create a standard CRUD controller to manipulate data within your site. An example of this is my "Pages" folder in the Demo Code (you may scaffold, but be sure you comment. If you choose not to scaffold, dont forget to add your new DBContext, and views appropriately)
+- Restrict your CRUD controller to specific access
+
 ## ReadMe
 A README is a module consumer's first -- and maybe only -- look into your creation. The consumer wants a module to fulfill their need, so you must explain exactly what need your module fills, and how effectively it does so.
 <br />
