@@ -32,6 +32,13 @@ Modifications **may** be required from your templated project....
 - Create a standard CRUD controller to manipulate data within your site. An example of this is my "Pages" folder in the Demo Code (you may scaffold, but be sure you comment. If you choose not to scaffold, dont forget to add your new DBContext, and views appropriately)
 - Restrict your CRUD controller to specific access
 
+### Day 3 (Class 34)
+Modifications **may** be required from your templated project....
+- Update your applicaiton to include at least 2 roles (based off of the ammended lecture on day 34)
+- Add at least one role based policy and one custom Authorization Handler policy to your application
+- Implement both of these policies in your site
+
+
 ## ReadMe
 A README is a module consumer's first -- and maybe only -- look into your creation. The consumer wants a module to fulfill their need, so you must explain exactly what need your module fills, and how effectively it does so.
 <br />
