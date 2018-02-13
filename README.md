@@ -38,6 +38,12 @@ Modifications **may** be required from your templated project....
 - Add at least one role based policy and one custom Authorization Handler policy to your application
 - Implement both of these policies in your site
 
+### Day 4 (Class 36)
+Modifications **may** be required from your templated project....
+- Update your applicaiton to include a View Component
+	- Examples include: Login/logout panel, Last "X" published articles, dynamic navigation....
+
+
 
 ## ReadMe
 A README is a module consumer's first -- and maybe only -- look into your creation. The consumer wants a module to fulfill their need, so you must explain exactly what need your module fills, and how effectively it does so.
