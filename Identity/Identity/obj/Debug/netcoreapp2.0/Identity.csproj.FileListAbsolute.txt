@@ -1,0 +1,12 @@
+C:\Users\nyque\source\repos\Week7-Identity\Identity\Identity\obj\Debug\netcoreapp2.0\Identity.csprojResolveAssemblyReference.cache
+C:\Users\nyque\source\repos\Week7-Identity\Identity\Identity\obj\Debug\netcoreapp2.0\Identity.csproj.CoreCompileInputs.cache
+C:\Users\nyque\source\repos\Week7-Identity\Identity\Identity\obj\Debug\netcoreapp2.0\UserSecretsAssemblyInfo.cs
+C:\Users\nyque\source\repos\Week7-Identity\Identity\Identity\obj\Debug\netcoreapp2.0\Identity.AssemblyInfoInputs.cache
+C:\Users\nyque\source\repos\Week7-Identity\Identity\Identity\obj\Debug\netcoreapp2.0\Identity.AssemblyInfo.cs
+C:\Users\nyque\source\repos\Week7-Identity\Identity\Identity\bin\Debug\netcoreapp2.0\Identity.deps.json
+C:\Users\nyque\source\repos\Week7-Identity\Identity\Identity\bin\Debug\netcoreapp2.0\Identity.runtimeconfig.json
+C:\Users\nyque\source\repos\Week7-Identity\Identity\Identity\bin\Debug\netcoreapp2.0\Identity.runtimeconfig.dev.json
+C:\Users\nyque\source\repos\Week7-Identity\Identity\Identity\bin\Debug\netcoreapp2.0\Identity.dll
+C:\Users\nyque\source\repos\Week7-Identity\Identity\Identity\bin\Debug\netcoreapp2.0\Identity.pdb
+C:\Users\nyque\source\repos\Week7-Identity\Identity\Identity\obj\Debug\netcoreapp2.0\Identity.dll
+C:\Users\nyque\source\repos\Week7-Identity\Identity\Identity\obj\Debug\netcoreapp2.0\Identity.pdb
