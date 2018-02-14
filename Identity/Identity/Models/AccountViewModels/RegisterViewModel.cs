@@ -16,10 +16,10 @@ namespace Identity.Models.AccountViewModels
         [Display(Name = "Last Name")]
         public string LastName { get; set; }
 
-        [Required]
-        [DataType(DataType.Date)]
-        [Display(Name = "Date of Birth")]
-        public DateTime DOB { get; set; }
+        //[Required]
+        //[DataType(DataType.Date)]
+        //[Display(Name = "Date of Birth")]
+        //public DateTime DOB { get; set; }
 
         [Required]
         [EmailAddress]

@@ -5,14 +5,9 @@ using System.Threading.Tasks;
 
 namespace Identity.Models
 {
-    public class UserModel
+    public class ToDo
     {
-        public int ID { get; set; }
         public string Task { get; set; }
         public string Description { get; set; }
-        public string Complete { get; set; }
-        public string Incomplete { get; set; }
-        public DateTime SetReminder { get; set; }
-
     }
 }
