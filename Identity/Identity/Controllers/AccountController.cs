@@ -56,6 +56,12 @@ namespace Identity.Controllers
             // Clear the existing external cookie to ensure a clean login process
             await HttpContext.SignOutAsync(IdentityConstants.ExternalScheme);
 
+            if (!await _roleManager.RoleExistsAsync("User"))
+            {
+                IdentityRole identityr = new IdentityRole { Name = "User", NormalizedName = "User" };
+                await _roleManager.CreateAsync(identityr);
+            }
+
             //not quite sure what this does but i think it returns the user back to previous url when signing out
             ViewData["ReturnUrl"] = returnUrl;
             return View();
@@ -74,12 +80,15 @@ namespace Identity.Controllers
                 // This doesn't count login failures towards account lockout
                 // To enable password failures to trigger account lockout, set lockoutOnFailure: true
                 var result = await _signInManager.PasswordSignInAsync(model.Email, model.Password, model.RememberMe, lockoutOnFailure: false);
+                var user = await _userManager.FindByEmailAsync(model.Email);
                 //checking correct form completion
                 if (result.Succeeded)
                 {
                     //capturing user login detail to store 
-                    _logger.LogInformation("User logged in.");
-                    //return to specified view after succesful login?
+                    _logger.LogInformation("User logged in.");                  
+                    Claim claim = new Claim(ClaimTypes.Role, "User");
+                    await _userManager.AddClaimAsync(user, claim);
+                    await _userManager.AddToRoleAsync(user, "user");
                     return RedirectToLocal(returnUrl);
                 }
                 //checking 2 factor authentication
@@ -98,6 +107,7 @@ namespace Identity.Controllers
                 {
                     //if not all terms are met above, we will display error and return them to view model
                     ModelState.AddModelError(string.Empty, "Invalid login attempt.");
+
                     return View(model);
                 }
             }
@@ -243,6 +253,7 @@ namespace Identity.Controllers
             {
                 var user = new ApplicationUser { UserName = model.Email, Email = model.Email };
                 var result = await _userManager.CreateAsync(user, model.Password);
+
                 if (result.Succeeded)
                 {
                     _logger.LogInformation("User created a new account with password.");
@@ -251,6 +262,7 @@ namespace Identity.Controllers
 
                     Claim claim = new Claim(ClaimTypes.Email, model.Email, ClaimValueTypes.String);
                     //Claim birthday = new Claim(ClaimTypes.DateOfBirth, model.Birthday);
+                    Claim nameClaim = new Claim(ClaimTypes.Name, $"{model.FirstName} {model.LastName}", ClaimValueTypes.String);
 
 
 
